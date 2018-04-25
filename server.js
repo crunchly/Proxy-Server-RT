@@ -15,11 +15,17 @@ app.use('/funding-rounds', (req, res) => {
     .then(data => res.send(data));
 });
 
+
 app.use('/overview', (req, res) => {
   fetch(`http://localhost:3002${req.originalUrl}`)
     .then(response => response.json())
     .then(data => res.send(data));
 });
+
+// app.get('http://localhost:3002/overview', (req, res) => {
+//   res.send()
+// });
+
 
 app.use('/people', (req, res) => {
   fetch(`http://localhost:3004${req.originalUrl}`)
