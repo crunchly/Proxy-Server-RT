@@ -2,36 +2,78 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/style.css">
-    <title>FEC Demo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+    <link href="http://localhost:3003/style.css" rel="stylesheet"> 
+    <link href="http://localhost:3002/styles.css" rel="stylesheet"> 
+    <link href="http://localhost:3001/style.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Crunchly</title>
   </head>
   <body>
-    <div id="overview"></div>
-    <div id="funding-rounds"></div>
-    <div id="chart"></div>
-    <div id="current-team"></div>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              <img class="cb-logo" src="logo_crunchbase.svg" alt="Crunchbase">
+            </a>
+          </div>
+          <div class="toolbar">
+            <ul >
+              <li class="nav-item">
+                <a href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">Marketplace</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">News</a>
+              </li>
+              <li class="nav-item">
+                <a href="#">About</a>
+              </li>
+            </ul>
+          </div>
+          <div class="search">
+            <input class="form-control" type="search" placeholder="Look up a company or person">
+          </div>
+          <div class="toolbar">
+              <ul >
+                <li class="nav-item">
+                  <a href="#">LOG IN</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#">REGISTER</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="small-bar">  
+      <div class="small-bar-img">
+        <img class="cb-small-bar-img" src="left_nav_pro_marketing.png">
+      </div>
+      <div class="small-bar-title">
+        <h2>Sutro</h2>
+      </div>
+    </div>
 
+    <div class="wrapper">
+      <div id="overview"></div>
+      <div id="funding_status"></div>
+      <div id="chart-module"></div>
+      <div id="current-team"></div>
+    </div>
+    
     <script src="http://localhost:3001/bundle.js"></script>
     <script src="http://localhost:3002/bundle.js"></script>
     <script src="http://localhost:3003/bundle.js"></script>
     <script src="http://localhost:3004/bundle.js"></script>
-    <script>
-      ReactDOM.render(
-        React.createElement(Overview),
-        document.getElementById('overview')
-      );
-      ReactDOM.render(
-        React.createElement(FundingRounds),
-        document.getElementById('funding-rounds')
-      );
-      ReactDOM.render(
-        React.createElement(Chart),
-        document.getElementById('chart')
-      );
-      ReactDOM.render(
-        React.createElement(CurrentTeam),
-        document.getElementById('current-team')
-      );
-    </script>
+
   </body>
 </html>
