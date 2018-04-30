@@ -4,7 +4,7 @@
   "description": "Aggregates all modules into one view",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon ./server.js",
+    "start": "node ./server.js",
     "lint": "eslint . --ext .js, .jsx"
   },
   "repository": {
